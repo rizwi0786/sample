@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int x[100],i, j, a, n ;
+    printf("Enter the no of element :");
+    scanf("%d", &n);
+    for(i=0; i<n; i++)
+    {
+        printf("Enter the no %d:",i+1);
+        scanf("%d",&x[i]);
+    }
+    for(i=0; i<n; i++)
+    {
+       for(j=i+1; j<n; j++)
+       {
+           if(x[i]<x[j])
+           {
+               a = x[i];
+               x[i]=x[j];
+               x[j]=a;
+           }
+       }
+    }
+   
+         printf("\n nos arrange in desending order ");
+    for(i=0; i<n; i++)
+    printf("  %d",x[i]);
+    return 0;
+}
